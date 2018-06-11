@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="com.alibababa" annotation-config="true"/>
+
+
+    <aop:aspectj-autoproxy/>
+
+    <!--首先与Spring相关的配置文件必须要以"applicationContext-"开头，要符合约定优于配置的思想-->
+    <import resource="applicationContext-datasource.xml"/>
+    <import resource="redis-context.xml"/>
+    <!--sping引入activemq的配置-->
+    <import resource="spring-activemq-queue.xml"/>
+    <import resource="spring-activemq-topic.xml"/>
+
+</beans>
