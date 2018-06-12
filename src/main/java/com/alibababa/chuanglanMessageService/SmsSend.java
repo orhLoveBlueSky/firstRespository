@@ -13,9 +13,9 @@ public class SmsSend {
 
     public static final String charset = "utf-8";
     // 请登录zz.253.com 获取创蓝API账号(非登录账号,示例:N1234567)
-    public static String account = "CN1713650";
+    public static String account = "CN17dsa0";
     // 请登录zz.253.com 获取创蓝API密码(非登录密码)
-    public static String password = "jiangushi888_";
+    public static String password = "jiangudsadsh8_";
 
     public static void send(String phone, String validateCode) throws UnsupportedEncodingException {
 		
@@ -32,7 +32,7 @@ public class SmsSend {
 //        String msg = msg1 + msg2;
 
         //手机号码
-//        String phone = "18845118773";  //15251212317
+//        String phone = "18845333313";  
         //状态报告
         String report= "true";
 
